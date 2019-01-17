@@ -15,7 +15,7 @@ if os.path.exists(path_dist+'/TAP_ENCODE'):
 os.chdir("/splunk_data/TAP/TAP_ENCODE")	
 
 ftp = FTP("10.6.3.68")
-ftp.login("sv8_tap_ftp","sv8tapftp@2018")
+ftp.login("","")
 
 lines = []
 # ftp.dir("/svw/svprod/data/server/roaming/roaming/input/tap/", lines.append) 
@@ -47,7 +47,7 @@ for line in lines:
 ftp.close()
 
 ftp = FTP("10.8.7.17")
-ftp.login("jautotap","SftpTap2018")
+ftp.login("","")
 
 lines = []
 ftp.dir("/data/CB/server/roaming/archive/tap/", lines.append)
