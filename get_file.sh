@@ -3,14 +3,12 @@
 cd /ftp
 
 HOST=10.10.194.3
-# USER=hlrftp1
-# PASSWORD=Ericsson@123
 
-USER=hlrftp2
-PASSWORD=Vietnam@123
+
+USER=''
+PASSWORD=''
 
 DATE=`date -d yesterday +%Y%m`
-#DATE="20180215"
 
 DATE_HLR=`date +%b`
 echo "$DATE Connect to FTP to get files."
@@ -20,7 +18,7 @@ binary
 cd /home/hlrftp
 ls -al
 mget "UDC Dump *$DATE_HLR*"
-#mget "VAS Dump $DATE*"
+mget "VAS Dump $DATE*"
 
 bye
 EOF
